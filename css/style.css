@@ -1,0 +1,68 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where our normal styles apply
+1800px + :      Big desktop
+
+$breakpoint arguement choices:
+- -phone
+- tabport
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layout + grid > page layout > components
+
+1em = 16px
+*/
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  background-color: #1F1F1F;
+  font-family: 'Roboto', sans-serif;
+  color: #666666;
+  font-weight: 400;
+  line-height: 1.7; }
+
+::selection {
+  background-color: #fff;
+  color: #1F1F1F; }
+
+.nav {
+  flex: 0 0 50%; }
+  .nav__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none; }
+  .nav__link:link, .nav__link:visited {
+    color: #666666;
+    text-decoration: none;
+    display: block;
+    padding: 1.5rem;
+    font-size: 1.6rem; }
+
+.logo-box {
+  flex: 0 0 50%; }
+
+.logo {
+  height: 100%; }
+
+.container {
+  max-width: 120rem;
+  margin: 0 auto; }
+
+.header {
+  height: 7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
